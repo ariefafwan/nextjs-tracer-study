@@ -26,33 +26,66 @@ This project is designed to manage tracer study questionnaires, alumni data, job
 -   Dynamic Filtering and Routing
 -   Admin Dashboard with Statistics
 
----
-
 ## 📁 Project Structure
 
-<pre> <code> ```bash 📁 Project Structure . ├── app/ # Laravel application core ├── bootstrap/ ├── config/ ├── database/ ├── public/ # Laravel public assets ├── resources/ │ └── views/ ├── routes/ │ └── api.php # API Routes ├── storage/ ├── tests/ ├── tracer-study-app/ # Next.js frontend │ ├── app/ # App directory (routes & SSR pages) │ ├── components/ # UI components │ ├── hooks/ # Custom React hooks │ ├── pages/ # (if used alongside app/) │ ├── public/ # Static assets │ ├── styles/ # Tailwind / Global styles │ ├── utils/ # Axios & helper functions ├── .env # Laravel environment variables ├── .gitignore ├── README.md └── composer.json ``` </code> </pre>
+```bash
+.
+├── app/ # Laravel application core
+├── bootstrap/
+├── config/
+├── database/
+├── public/ # Laravel public assets
+├── resources/
+│ └── views/
+├── routes/
+│ └── api.php # API Routes
+├── storage/
+├── tests/
+├── tracer-study-app/ # Next.js frontend
+│ ├── app/ # App directory (routes & SSR pages)
+│ ├── components/ # UI components
+│ ├── lib/
+│ ├── pages/
+│ ├── public/ # Static assets
+│ ├── styles/ # Tailwind / Global styles
+│ ├── utils/ # Axios & helper functions
+│ └── ...
+├── .env # Laravel environment variables
+├── .gitignore
+├── README.md
+└── composer.json
+```
 
 # 🔧 Installation & Development
 
 1. Clone the repository
+
+```bash
    git clone https://github.com/ariefafwan/nextjs-tracer-study
    cd nextjs-tracer-study
+```
 
 2. Setup Laravel Backend
+
+```bash
    cp .env.example .env
    composer install
    php artisan key:generate
    php artisan jwt:secret
    php artisan migrate --seed
    php artisan serve
+```
 
 Laravel will run at: http://localhost:8000
 
 3. Setup Next.js Frontend
+
+```bash
    cd tracer-study-app
    cp .env.example .env
    npm install
    npm run dev
+```
 
 Next.js will run at: http://localhost:3000
 
@@ -87,4 +120,4 @@ Create a Pull Request
 
 # 📄 License
 
-This project is open-source and available under the MIT License.
+This project is open-source and available under the [MIT](https://choosealicense.com/licenses/mit/) License.
