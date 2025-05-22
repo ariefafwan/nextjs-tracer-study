@@ -1,55 +1,38 @@
-Tracer Study Web Application
+# 🎓 Tracer Study Web Application
 
-A full-stack web application built with Laravel (API Backend) and Next.js (Frontend SPA/SSR). This project is designed to manage tracer study questionnaires, alumni data, job postings, and related features.
+A full-stack web application built with **Laravel** (API Backend) and **Next.js** (Frontend SPA/SSR).  
+This project is designed to manage tracer study questionnaires, alumni data, job postings, and related features.
 
-🚀 Tech Stack
-Backend: Laravel
+---
+
+## 🚀 Tech Stack
+
+### 🔧 Backend: Laravel
 
 -   PHP 8+
 -   Laravel 10
--   JWT Authentication (tymon/jwt-auth)
+-   JWT Authentication (`tymon/jwt-auth`)
 -   RESTful API
 -   MySQL
 -   Middleware, Validation
 
-Frontend: Next.js (Located in tracer-study-app/)
+### 🎨 Frontend: Next.js (Located in `tracer-study-app/`)
 
 -   Next.js 14+ (App Router with SSR)
--   SSR & CSR
+-   Server-Side Rendering (SSR) & Client-Side Rendering (CSR)
 -   Axios
 -   Tailwind CSS
--   Midleware Token
+-   Middleware Token Validation
 -   Dynamic Filtering and Routing
--   Dashboard Admin with Statistics
+-   Admin Dashboard with Statistics
 
-📁 Project Structure
-.
-├── app/ # Laravel application core
-├── bootstrap/
-├── config/
-├── database/
-├── public/ # Laravel public assets
-├── resources/
-│ └── views/
-├── routes/
-│ └── api.php # API Routes
-├── storage/
-├── tests/
-├── tracer-study-app/ # Next.js frontend
-│ ├── app/ # App directory (routes & SSR pages)
-│ ├── components/ # UI components
-│ ├── hooks/ # Custom React hooks
-│ ├── pages/ # (if used alongside app/)
-│ ├── public/ # Static assets
-│ ├── styles/ # Tailwind / Global styles
-│ ├── utils/ # Axios & helper functions
-│ └── ...
-├── .env # Laravel environment variables
-├── .gitignore
-├── README.md
-└── composer.json
+---
 
-🔧 Installation & Development
+## 📁 Project Structure
+
+<pre> <code> ```bash 📁 Project Structure . ├── app/ # Laravel application core ├── bootstrap/ ├── config/ ├── database/ ├── public/ # Laravel public assets ├── resources/ │ └── views/ ├── routes/ │ └── api.php # API Routes ├── storage/ ├── tests/ ├── tracer-study-app/ # Next.js frontend │ ├── app/ # App directory (routes & SSR pages) │ ├── components/ # UI components │ ├── hooks/ # Custom React hooks │ ├── pages/ # (if used alongside app/) │ ├── public/ # Static assets │ ├── styles/ # Tailwind / Global styles │ ├── utils/ # Axios & helper functions ├── .env # Laravel environment variables ├── .gitignore ├── README.md └── composer.json ``` </code> </pre>
+
+# 🔧 Installation & Development
 
 1. Clone the repository
    git clone https://github.com/ariefafwan/nextjs-tracer-study
@@ -78,7 +61,7 @@ For Admin Panel, login with:
 -   email: admin@admin.com
 -   password: password
 
-🧩 Features
+# 🧩 Features
 
 -   🔐 Authentication using JWT
 -   📋 Tracer Study Form submission & tracking
@@ -87,18 +70,21 @@ For Admin Panel, login with:
 -   🔄 Axios Interceptors for automatic token handling
 -   📊 Statistical Reporting for admin panel
 
-📌 Usage Notes
+# 📌 Usage Notes
+
 Laravel backend runs on http://localhost:8000
 Next.js frontend runs on http://localhost:3000
 Dashboard & Other Protected routes are under /auth/\*
 Tracer Study form is accessed via /kuisioner/
 
-👥 Contribution Guide
+# 👥 Contribution Guide
+
 Fork this repository
 Create your feature branch (git checkout -b feature/your-feature-name)
 Commit your changes (git commit -m 'Add your feature')
 Push to the branch (git push origin feature/your-feature-name)
 Create a Pull Request
 
-📄 License
+# 📄 License
+
 This project is open-source and available under the MIT License.
