@@ -11,10 +11,11 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
-
+use Tymon\JWTAuth\Exceptions\TokenInvalidException;
 
 class AuthController extends Controller
 {
+
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -61,5 +62,17 @@ class AuthController extends Controller
         }
 
         return response()->json(['success' => 'You Are Authenticated'], 200);
+    }
+
+    public function refresh()
+    {
+        try {
+            $newToken = JWTAuth::parseToken()->refresh();
+            return response()->json([
+                'token' => $newToken
+            ]);
+        } catch (TokenInvalidException $e) {
+            return response()->json(['error' => 'Token tidak valid atau kadaluarsa'], 401);
+        }
     }
 }
