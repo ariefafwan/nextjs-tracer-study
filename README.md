@@ -42,13 +42,15 @@ This project is designed to manage tracer study questionnaires, alumni data, job
 ├── storage/
 ├── tests/
 ├── tracer-study-app/ # Next.js frontend
-│ ├── app/ # App directory (routes & SSR pages)
 │ ├── components/ # UI components
-│ ├── lib/
-│ ├── pages/
+│ ├── lib/ # For Fetch Data
+│ ├── pages/ # Pages router directory (routes & all pages)
 │ ├── public/ # Static assets
 │ ├── styles/ # Tailwind / Global styles
 │ ├── utils/ # Axios & helper functions
+│ ├── views/ # View Page Components
+│ ├── middleware.ts/ # Middleware file
+│ ├── .env/ # Nuxtjs environment variables
 │ └── ...
 ├── .env # Laravel environment variables
 ├── .gitignore
@@ -68,11 +70,12 @@ This project is designed to manage tracer study questionnaires, alumni data, job
 2. Setup Laravel Backend
 
 ```bash
-   cp .env.example .env
    composer install
+   cp .env.example .env
    php artisan key:generate
    php artisan jwt:secret
    php artisan migrate --seed
+   php artisan storage:link
    php artisan serve
 ```
 
