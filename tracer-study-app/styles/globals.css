@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+* {
+  font-family: 'Poppins', 'sans-serif';
+}
+
+.customModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0;
+  border-radius: 0.5rem;
+  z-index: 1050;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: none;
+  min-width: 42rem;
+  padding: 2rem;
+}
+
+.customModal:focus {
+  outline-width: 0px;
+}
+
+.customOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
