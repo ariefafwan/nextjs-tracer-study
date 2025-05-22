@@ -49,8 +49,8 @@ This project is designed to manage tracer study questionnaires, alumni data, job
 │ ├── styles/ # Tailwind / Global styles
 │ ├── utils/ # Axios & helper functions
 │ ├── views/ # View Page Components
-│ ├── middleware.ts/ # Middleware file
-│ ├── .env/ # Nuxtjs environment variables
+│ ├── middleware.ts # Middleware file
+│ ├── .env # Nuxtjs environment variables
 │ └── ...
 ├── .env # Laravel environment variables
 ├── .gitignore
